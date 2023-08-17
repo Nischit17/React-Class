@@ -110,6 +110,21 @@
   cursor: pointer;
 }
 
+.online {
+  position: relative;
+}
+.online::after {
+  content: "NEW";
+  font-size: 10px;
+  font-weight: 600;
+  width: 7px;
+  height: 7px;
+  color: #ffa700;
+  position: absolute;
+  top: 26px;
+  right: -9px;
+}
+
 .items .nav-item a {
   display: flex;
   align-items: center;

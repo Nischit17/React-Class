@@ -66,7 +66,7 @@ const Header = () => {
                   </div>
                 </li>
                 <li>
-                  <div className="nav-item">
+                  <div className="nav-item online">
                     <a href="">
                       <svg
                         class="_1GTCc"
