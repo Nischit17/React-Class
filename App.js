@@ -128,7 +128,23 @@ const Header = () => {
       </header>
 
       {/* Content Section */}
-      <main></main>
+      <main className="content-section">
+        <section className="restaurants">
+          <div className="container">
+            <div className="item-bar">
+              <div className="number">19 restaurants</div>
+              <div className="filters">
+                <div className="relevance">Relevance</div>
+                <div className="delivery">Delivery Time</div>
+                <div className="rating">Rating</div>
+                <div className="costlh">Cost: Low To High</div>
+                <div className="costhl">Cost: High To Low</div>
+              </div>
+            </div>
+            <div className="restaurant-list"></div>
+          </div>
+        </section>
+      </main>
 
       {/* Footer Section */}
       <footer className="footer"></footer>
