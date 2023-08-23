@@ -1,54 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://images-platform.99static.com//Ba6VdSQsbU4OpiyQEzLi7yHy9KQ=/440x521:1494x1575/fit-in/500x500/99designs-contests-attachments/127/127439/attachment_127439993"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>HOME</li>
-          <li>ABOUT US</li>
-          <li>CONTACT US</li>
-          <li>CART</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const RestaurantCard = (props) => {
-  const { resData } = props;
-
-  const { deliveryTime } = resData?.info.sla;
-
-  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
-    resData?.info;
-
-  return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
-      <img
-        className="res-logo"
-        alt="res-logo"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-      />
-      <h3>{name}</h3>
-      <h4>{cuisines.join(" , ")}</h4>
-      <h4>{avgRating} Star</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{deliveryTime} Mins</h4>
-    </div>
-  );
-};
-
 const resList = [
   {
     info: {
@@ -1929,27 +1878,4 @@ const resList = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">SEARCH</div>
-      <div className="res-container">
-        {resList.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default resList;

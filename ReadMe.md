@@ -19,3 +19,13 @@
 - HTTPs
 - Tree Shaking (Remove unused code)
 - Diffrent dev and prod bundles
+
+# There are 2 types of EXPORT AND IMPORT
+
+- Default EXPORT/IMPORT
+  export defalut Component;
+  import Component from "path";
+
+- Named EXPORT/IMPORT
+  import {Component} from "path";
+  export const Component;
