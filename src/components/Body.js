@@ -4,27 +4,7 @@ import { useState } from "react";
 
 const Body = () => {
   // Local State variable - Super powerful variable
-  const [listOfRestaurants] = useState([
-    {
-      info: {
-        id: "10576",
-        name: "Pizza Hut",
-        cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
-        costForTwo: "₹350 for two",
-        cuisines: ["Pizzas"],
-        avgRating: 3.8,
-        sla: {
-          deliveryTime: 21,
-        },
-      },
-    },
-  ]);
-
-  // Normal JS variable
-  // let listOfRestaurants = null;
-
-  // Normal JS variable
-  let listOfRestaurantsJS = [
+  const [listOfRestaurants, setListOfRestaurant] = useState([
     {
       info: {
         id: "10576",
@@ -64,7 +44,7 @@ const Body = () => {
         },
       },
     },
-  ];
+  ]);
 
   return (
     <div className="body">
@@ -72,12 +52,10 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            // Filter logic here
-
-            listOfRestaurants = listOfRestaurants.filter(
+            const filterdList = listOfRestaurants.filter(
               (res) => res.info.avgRating > 4
             );
-            console.log(listOfRestaurants);
+            setListOfRestaurant(filterdList);
           }}
         >
           Top Rated Restaurants
