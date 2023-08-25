@@ -29,3 +29,10 @@
 - Named EXPORT/IMPORT
   import {Component} from "path";
   export const Component;
+
+# React Hooks
+
+- They are normal JS utility functions.
+- Two important HOOKS
+- 1. useState() - SuperPowerFull State variables in react.
+- 2. useEffect()
