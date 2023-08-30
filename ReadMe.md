@@ -36,3 +36,11 @@
 - Two important HOOKS
 - 1. useState() - SuperPowerFull State variables in react.
 - 2. useEffect()
+
+# MONOLITH ARCHITECTURE
+
+- Monolith architecture is a traditional software design approach where an entire application is built as a single, self-contained unit. In this architecture, all components and functionalities of the application are tightly integrated into a single codebase, typically deployed as a single executable or a deployable unit.
+
+# MICRO-SERVICE ARCHITECTURE
+
+- Microservice architecture is a modern software design approach where an application is broken down into small, loosely coupled services that are independently deployable and maintainable. This architecture promotes scalability, agility, and fault isolation, allowing teams to develop, deploy, and scale individual services independently, making it easier to adapt to changes and manage complex applications.
