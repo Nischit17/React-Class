@@ -44,3 +44,11 @@
 # MICRO-SERVICE ARCHITECTURE
 
 - Microservice architecture is a modern software design approach where an application is broken down into small, loosely coupled services that are independently deployable and maintainable. This architecture promotes scalability, agility, and fault isolation, allowing teams to develop, deploy, and scale individual services independently, making it easier to adapt to changes and manage complex applications.
+
+# WHEN TO MAKE AN API CALL - 2 TYPES (IN REACT WE WILL BE USING THE 2ND APPROACH.)
+
+- LOADS -> API -> RENDER
+- As soon as our page loads we can make an API call and when we get the data then we can render it on to the UI.
+
+- LOADS -> RENDER -> API -> RENDER
+- As soon as the page loads we will just render our UI. After we should make a API call and as soon as we get result back from API we will now re-render our application with new data.
