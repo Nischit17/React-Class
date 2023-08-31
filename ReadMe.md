@@ -52,3 +52,31 @@
 
 - LOADS -> RENDER -> API -> RENDER
 - As soon as the page loads we will just render our UI. After we should make a API call and as soon as we get result back from API we will now re-render our application with new data.
+
+# CORS [CROSS ORIGIN RESOURCE SHARING]
+
+- Cross-Origin Resource Sharing (CORS) is a security feature implemented in web browsers to control and manage how web pages from one domain can request and access resources (like data or scripts) from another domain. Browsers enforce CORS to prevent potentially malicious websites from making unauthorized requests to different domains on behalf of users.
+
+# WORKING
+
+- Origin Determination: Browsers use the "origin" to identify where a web request comes from. An origin consists of the protocol (e.g., "http" or "https"), domain, and port number.
+
+- Same-Origin Policy: Browsers follow the same-origin policy by default, which restricts web pages from making requests to different origins. This prevents potential security risks by isolating websites from each other.
+
+- Cross-Origin Requests: If a web page wants to make a request to a different origin (e.g., a different domain), it's considered a cross-origin request. Browsers enforce CORS for these requests.
+
+- CORS Headers: When a cross-origin request is made, the browser adds an "Origin" header to the request. The server, in turn, responds with CORS-related headers in its response. The key headers are:
+
+* Access-Control-Allow-Origin: Specifies which origins are allowed to access the resource. It can be a specific origin or a wildcard "\*".
+
+* Access-Control-Allow-Methods: Indicates which HTTP methods (like GET, POST, etc.) are permitted for the request.
+
+* Access-Control-Allow-Headers: Lists the HTTP headers that can be included in the actual request.
+
+* Access-Control-Allow-Credentials: If true, indicates that the browser can include credentials (like cookies) in the request.
+
+* Access-Control-Expose-Headers: Lists the headers that the browser can access in the response.
+
+- Preflight Requests: For certain types of cross-origin requests (such as those with non-simple HTTP methods or custom headers), browsers send a preflight request with an HTTP OPTIONS method to the server. The server responds with appropriate CORS headers, indicating whether the actual request can proceed.
+
+- Server Configuration: The server hosting the resource should be configured to send the appropriate CORS headers. These headers define which origins are allowed, what methods are permitted, and other relevant details. This configuration is essential for CORS to work effectively.
