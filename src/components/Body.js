@@ -1,5 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // Local State variable - Super powerful variable
@@ -23,6 +24,10 @@ const Body = () => {
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
 
   return (
     <div className="body">
