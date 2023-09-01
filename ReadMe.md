@@ -80,3 +80,7 @@
 - Preflight Requests: For certain types of cross-origin requests (such as those with non-simple HTTP methods or custom headers), browsers send a preflight request with an HTTP OPTIONS method to the server. The server responds with appropriate CORS headers, indicating whether the actual request can proceed.
 
 - Server Configuration: The server hosting the resource should be configured to send the appropriate CORS headers. These headers define which origins are allowed, what methods are permitted, and other relevant details. This configuration is essential for CORS to work effectively.
+
+# CONDITIONAL RENDERING
+
+- Rendering on the basis of some condition is known as conditional rendering.
