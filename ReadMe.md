@@ -35,7 +35,9 @@
 - They are normal JS utility functions.
 - Two important HOOKS
 - 1. useState() - SuperPowerFull State variables in react.
-- 2. useEffect()
+- 2. useEffect() - If no dependency array => useEffect is called on every render.
+     If dependency array is empty [] => useEffect is called on initial render(JUST ONCE)
+     If dependency array is [btnNameReact] => called everytime btnNameReact is updated.
 
 # MONOLITH ARCHITECTURE
 
