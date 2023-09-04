@@ -33,11 +33,36 @@
 # React Hooks
 
 - They are normal JS utility functions.
-- Two important HOOKS
-- 1. useState() - SuperPowerFull State variables in react.
-- 2. useEffect() - If no dependency array => useEffect is called on every render.
-     If dependency array is empty [] => useEffect is called on initial render(JUST ONCE)
-     If dependency array is [btnNameReact] => called everytime btnNameReact is updated.
+- Two important HOOKS:-
+
+- 1. useState()
+- SuperPowerFull State variables in react.
+- When we use useState, we should never use useState or create the state variables outside of our Component. Because it is used for creating local state variables inside our functional component.
+- Never use our useState HOOK inside a if-else, functions because this can create inconsistency in our program.
+
+- 2. useEffect()
+- If no dependency array => useEffect is called on every render.
+
+```
+Component render + useEffect called.
+
+```
+
+- If dependency array is empty [] => useEffect is called on initial render(JUST ONCE)
+
+```
+1st time - Component render + useEffect called.
+2nd time - Component render.
+
+```
+
+- If dependency array is [btnNameReact] => called everytime btnNameReact is updated.
+
+```
+1st time - Component render + useEffect called.
+2nd time - By clicking on login/out it renders.
+
+```
 
 # MONOLITH ARCHITECTURE
 
