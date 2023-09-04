@@ -111,3 +111,8 @@ Component render + useEffect called.
 # CONDITIONAL RENDERING
 
 - Rendering on the basis of some condition is known as conditional rendering.
+
+# 2 types of Routing in WEB APPS
+
+- Client side routing.
+- Server side routing.
