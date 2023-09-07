@@ -65,10 +65,15 @@
 }
 
 .login {
-  padding: 0px 20px;
+  padding: 0 20px;
   cursor: pointer;
 }
 
 .filter {
   display: flex;
+}
+
+.user-card {
+  padding: 10px;
+  border: 1px solid black;
 }
