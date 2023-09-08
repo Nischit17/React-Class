@@ -6,18 +6,18 @@ class UserClass extends React.Component {
     this.state = {
       count: 0,
     };
-    console.log("Child Constructor");
+    console.log(this.props.name + "Child Constructor");
   }
 
   componentDidMount() {
-    console.log("Child Component Did Mount");
+    console.log(this.props.name + "Child Component Did Mount");
   }
 
   render() {
     const { name, location } = this.props;
     const { count } = this.state;
 
-    console.log("Child Render");
+    console.log(this.props.name + "Child Render");
 
     return (
       <div className="user-card">

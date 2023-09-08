@@ -19,7 +19,8 @@ class About extends React.Component {
       <div>
         <h1>ABOUT CLASS COMPONENT</h1>
         <h2>This is About page</h2>
-        <UserClass name={"Nischit (Classs)"} location={"DAVANAGERE CLASSS"} />
+        <UserClass name={"First"} location={"DAVANAGERE CLASSS"} />
+        <UserClass name={"Second"} location={"US"} />
       </div>
     );
   }

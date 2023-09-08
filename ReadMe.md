@@ -116,3 +116,9 @@ Component render + useEffect called.
 
 - Client side routing.
 - Server side routing.
+
+# REACT LIFE CYCLE METHOD
+
+```
+- URL :- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+```
