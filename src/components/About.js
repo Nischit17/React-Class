@@ -13,6 +13,10 @@ class About extends React.Component {
     console.log("Parent Component Did Mount");
   }
 
+  componentWillUnmount() {
+    console.log("Component will unmount");
+  }
+
   render() {
     console.log("Parent Render");
     return (
@@ -20,7 +24,6 @@ class About extends React.Component {
         <h1>ABOUT CLASS COMPONENT</h1>
         <h2>This is About page</h2>
         <UserClass name={"First"} location={"DAVANAGERE CLASSS"} />
-        <UserClass name={"Second"} location={"US"} />
       </div>
     );
   }
