@@ -13,19 +13,12 @@ const RestaurantMenu = () => {
     resInfo?.cards[0]?.card?.card?.info;
 
   const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-  console.log(itemCards);
-  console.log(itemCards.length);
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+      ?.card || {};
 
-  // const { itemCardsNew } =
-  //   resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card
-  //     ?.itemCards;
-  // console.log(
-  //   resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card
-  //     ?.itemCards
-  // );
-  // console.log(itemCardsNew.length);
-
+  const itemCardsNew =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]?.card?.card
+      ?.itemCards;
   return (
     <div className="menu">
       <h1>{name}</h1>
@@ -35,18 +28,22 @@ const RestaurantMenu = () => {
       <h3></h3>
       <h2>Menu</h2>
       <ul>
-        {itemCards.map(
-          (item) => (
-            console.log(item),
-            (
+        {itemCardsNew
+          ? itemCardsNew.map((item) => (
               <li key={item.card.info.id}>
                 {item.card.info.name} -{"Rs."}
                 {item.card.info.price / 100 ||
                   item.card.info.defaultPrice / 100}
               </li>
-            )
-          )
-        )}
+            ))
+          : itemCards.map((item) => (
+              <li key={item.card.info.id}>
+                {item.card.info.name} -{"Rs."}
+                {item.card.info.price / 100 ||
+                  item.card.info.defaultPrice / 100}
+              </li>
+            ))}
+
         {/* <li>Burgers</li>
         <li>Diet Coke</li> */}
       </ul>
