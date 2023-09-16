@@ -122,3 +122,20 @@ Component render + useEffect called.
 ```
 - URL :- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 ```
+
+# REDUX
+
+- React and Redux are different libraries.
+
+- Advantages
+
+- 1. While building large applications redux offers great solution for it like, Handling data, Managing the store, etc...
+- 2. It is primarily used for handling state for application.
+- 3. Application becomes easier to debug.
+
+- There are 2 Libraries redux offers
+
+- 1. REACT-REDUX :- It is like a bridge between react and redux.
+- 2. REDUX TOOLKIT :- It is a newer way of writing redux.
+
+- REDUX TOOLKIT (RTK).
