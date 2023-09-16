@@ -139,3 +139,11 @@ Component render + useEffect called.
 - 2. REDUX TOOLKIT :- It is a newer way of writing redux.
 
 - REDUX TOOLKIT (RTK).
+
+# ARCHITECTURE OF REDUX [CART UPDATE]
+
+- ADD -> A (dispatch (action)) -> Fn() (reducer) -> STORE(slice) -> selector (subscribed to the store) -> CART.
+
+- Explanation (WRITE) :- when we click on the add btn it dispatches an action and calls a reducer function and this reducer function updates the slice of redux store and data gets updated, so this is how we write the data.
+
+- Explanation (READ) :- We will use the SELECTOR to read the data from the store and this selector will modify our react component magically, so this is how we read the data. When we say subscribing to the store it means it is in SYNC with the store. If our data inside our store changes our component will update automagically.
