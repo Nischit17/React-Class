@@ -123,7 +123,14 @@ Component render + useEffect called.
 - URL :- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 ```
 
-# REDUX
+# REDUX Toolkit
+
+- Install @reduxjs/toolkit and react-redux.
+- Build our store.
+- Connect our store to our app.
+- Slice (cartSlice).
+- Dispatch(action).
+  -Selector.
 
 - React and Redux are different libraries.
 
