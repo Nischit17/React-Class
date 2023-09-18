@@ -8,6 +8,7 @@ const ItemList = ({ items, dummy }) => {
   const handleAddItem = () => {
     dispatch(addItems("pizza"));
   };
+  
   return (
     <div>
       {items.map((item) => (
