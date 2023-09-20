@@ -6,7 +6,7 @@ const ItemList = ({ items, dummy }) => {
   const dispatch = useDispatch();
 
   const handleAddItem = (item) => {
-    dispatch(addItem(item));
+    dispatch(addItem());
   };
 
   return (
