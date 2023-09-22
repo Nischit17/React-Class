@@ -39,7 +39,7 @@ const Header = () => {
             <Link to={"/grocery"}>GROCERY</Link>
           </li>
           <li className="px-4 py-2 pr-8 font-bold">
-            CART ({cartItems.length} items)
+            <Link to={"/cart"}>CART ({cartItems.length} items)</Link>
           </li>
           <button
             className="px-5 py-2 bg-blue-200 rounded-lg"

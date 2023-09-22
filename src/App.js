@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-// import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
@@ -11,13 +10,12 @@ import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import Shimmer from "./components/Shimmer";
 import appStore from "./utils/appStore";
-// import Grocery from "./components/Grocery";
+import Cart from "./components/Cart";
 
 const AppLayout = () => {
   const [userName, setUserName] = useState();
 
   useEffect(() => {
-    // Make an api call send username and pass
     const data = {
       name: "NISCHIT D S",
     };
@@ -72,6 +70,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
