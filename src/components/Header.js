@@ -11,7 +11,6 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const { loggedInUser } = useContext(UserContext);
-  // console.log(loggedInUser);
 
   const cartItems = useSelector((store) => store.cart.items);
   console.log(cartItems);
@@ -26,23 +25,23 @@ const Header = () => {
           <li className="px-4  py-2">
             ONLINE STATUS: {onlineStatus ? "🔋" : "🚨"}
           </li>
-          <li className="px-4 py-2">
+          <li className="px-4 py-2 font-bold">
             <Link to={"/"}>HOME</Link>
           </li>
-          <li className="px-4 py-2">
-            <Link to={"/About"}>ABOUT US</Link>
+          <li className="px-4 py-2 font-bold">
+            <Link to={"/About"}>ABOUT</Link>
           </li>
-          <li className="px-4 py-2">
+          {/* <li className="px-4 py-2">
             <Link to={"/Contact"}>CONTACT US</Link>
           </li>
           <li className="px-4 py-2">
             <Link to={"/grocery"}>GROCERY</Link>
-          </li>
+          </li> */}
           <li className="px-4 py-2 pr-8 font-bold">
-            <Link to={"/cart"}>CART ({cartItems.length} items)</Link>
+            <Link to={"/cart"}>CART - ({cartItems.length} items)</Link>
           </li>
           <button
-            className="px-5 py-2 bg-blue-200 rounded-lg"
+            className="px-5 py-2 bg-blue-200 rounded-lg font-bold"
             onClick={() => {
               btnNameReact === "Login"
                 ? setbtnNameReact("Logout")
@@ -52,7 +51,7 @@ const Header = () => {
             {btnNameReact}
           </button>
 
-          <li className="px-4 py-2 pr-8 font-bold">{loggedInUser}</li>
+          <li className="px-6 py-2 pr-8 font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
