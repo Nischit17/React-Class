@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { addItem, removeItem } from "../utils/cartSlice";
 import { CDN_URL } from "../utils/constants";
 
 const ItemList = ({ items, dummy }) => {
@@ -7,6 +7,10 @@ const ItemList = ({ items, dummy }) => {
 
   const handleAddItem = (item) => {
     dispatch(addItem(item));
+  };
+
+  const handleRemoveItem = (item) => {
+    dispatch(removeItem(item));
   };
 
   return (
@@ -34,17 +38,23 @@ const ItemList = ({ items, dummy }) => {
             </p>
           </div>
           <div className="w-3/12 p-4">
-            <div className="absolute ">
+            <div className="relative inline-block ">
               <button
-                className="flex px-2 py-2 mt-16 ml-16 cursor-pointer rounded border border-solid border-[#d4d5d9] bg-white text-[13px] font-semibold text-[#60b246] shadow-[0_3px_8px_#e9e9eb]"
+                className="absolute bottom-0 w-20 h-14 z-50 cursor-pointer left-16 top-32 text-[13px] font-semibold text-[#000000]"
                 onClick={() => handleAddItem(item)}
               >
-                Add +
+                ADD
+              </button>
+              <button
+                className="absolute bottom-0 w-20 h-14 z-50 cursor-pointer left-40 top-32 text-[13px] font-semibold text-[#000000]"
+                onClick={() => handleRemoveItem(item)}
+              >
+                REMOVE
               </button>
             </div>
             <div className="flex  flex-col items-center justify-center">
               <img
-                className="mb-[-30px] h-[96px] min-h-[96px] w-[118px] min-w-[118px] rounded-md"
+                className="relative left-[50px] bottom-[40px] mb-[-30px] h-[170px] w-[185px]  rounded-md"
                 alt="resMenuImage"
                 src={CDN_URL + item.card.info.imageId}
               />

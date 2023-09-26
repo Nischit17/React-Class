@@ -167,3 +167,4 @@ Component render + useEffect called.
 - Installed jest
 - Installed Babel dependencies
 - Configure Babel
+- Configure Parcel Config file to disable babel transpilation
