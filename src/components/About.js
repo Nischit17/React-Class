@@ -28,7 +28,7 @@ const AboutPage = () => {
               <ul className="list-none text-xl">
                 <li>👀 I’m interested in web developement</li>
                 <li>🌱 I’m currently learning React</li>
-                <li>📫 Reach me via : nischit819@gmail.com</li>
+                <li>📫 Reach me via : nischit819@gmail.com(email)</li>
               </ul>
             </div>
           </div>
