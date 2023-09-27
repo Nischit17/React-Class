@@ -168,3 +168,5 @@ Component render + useEffect called.
 - Installed Babel dependencies
 - Configure Babel
 - Configure Parcel Config file to disable babel transpilation
+- Jest Configuration -> npx jest --init
+- Install jsDOM library
