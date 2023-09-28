@@ -170,3 +170,5 @@ Component render + useEffect called.
 - Configure Parcel Config file to disable babel transpilation
 - Jest Configuration -> npx jest --init
 - Install jsDOM library
+- Install @babel/preset-react - to make JSX work in test cases.
+- Include @babel/preset-react inside my babel config.
